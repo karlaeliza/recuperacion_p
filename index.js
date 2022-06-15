@@ -18,3 +18,7 @@ const words = ['caballo', 'vacas', 'gallinas', 'cerdos', 'patos', 'borregos'];
 const result = words.filter(word => word.length > 6);
 
 console.log(result);
+//reduce//
+//caso de uso: reduce un valor que tenga las variables//
+var total = [0, 1, 2, 3].reduce(function(a, b){ return a + b; });
+console.log(total);
