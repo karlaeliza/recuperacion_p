@@ -34,3 +34,131 @@ console.log(newstr);
 //caso de uso: 
 let myArray = ['caballos', 'vacas', 'gallinas', 'patos', 'cerdos', 'borregos'];
 console.log(myArray);
+
+//ejemplos de promesa//
+//Caso de uso: se seleccionara la promesa correspondida con la granja //
+const getUsers = async() => {
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            resolve([{
+
+                    id: 1,
+
+                    name: "karla",
+
+                },
+
+                {
+
+                    id: 2,
+
+                    name: "´patos",
+
+                },
+
+            ]);
+
+        }, 3000);
+
+    });
+
+};
+
+
+
+const getCategories = async() => {
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            resolve([{
+
+                    id: 1,
+
+                    name: "cerdos",
+
+                },
+
+                {
+
+                    id: 2,
+
+                    name: "granja",
+
+                },
+
+            ]);
+
+        }, 100);
+
+    });
+
+};
+
+
+
+const getReports = async() => {
+
+    return new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+
+            resolve([{
+
+                    id: 1,
+
+                    name: "caballos",
+
+                },
+
+                {
+
+                    id: 2,
+
+                    name: "gallinas",
+
+                },
+
+            ]);
+
+        }, 300);
+
+    });
+
+};
+
+
+
+(async function main() {
+
+    try {
+
+        const users = await getUsers();
+
+        console.log(users);
+
+        console.log(users.length);
+
+        const categories = await getCategories();
+
+        console.log(categories);
+
+        console.log(categories.length);
+
+        const reports = await getReports();
+
+        console.log(reports);
+
+        console.log(reports.length);
+
+    } catch (error) {
+
+        console.log("Error: " + error);
+
+    }
+
+})();
