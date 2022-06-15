@@ -11,3 +11,10 @@ var roots = numbers.map(function(num) {
     return Math.sqrt(num);
 });
 console.log(doubles,roots);
+//filter//
+//caso de uso: seleccionar animal mayor a seis letras//
+const words = ['caballo', 'vacas', 'gallinas', 'cerdos', 'patos', 'borregos'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
