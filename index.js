@@ -22,3 +22,10 @@ console.log(result);
 //caso de uso: reduce un valor que tenga las variables//
 var total = [0, 1, 2, 3].reduce(function(a, b){ return a + b; });
 console.log(total);
+
+//replace//
+//caso de uso:seleccionar el alimento y remplazarlo por la variable//
+var re = /apples/gi;
+var str = "Apples are round, and apples are juicy.";
+var newstr = str.replace(re, "oranges");
+console.log(newstr);
